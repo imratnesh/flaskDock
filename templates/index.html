@@ -9,7 +9,24 @@
   justify-content: center;
 }
 
-.typewriter h1 {
+/* .form-s {
+ margin: 12em;
+} */
+input[type="text"] {
+    width: 80%;
+}
+
+input[type="submit"] {
+    width: 50%;
+    color: orange;
+    font-weight: bold;
+}
+form.form-s input {
+    height: 3em;
+    font-size: 1em;
+    margin: 1.5em;
+}
+.typewriter h1, h2, h3 {
   color: #f5eaea;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
@@ -36,7 +53,14 @@
 </head>
 <body>
 	<div class="typewriter">
-  		<h1>Welcome {{name}} Docker Website</h1>
+      <h1>Welcome {{name}} Docker Website</h1>
+      <form class="form-s" action="" method="post">
+        <div><input type="text" name="text" placeholder="Enter review"/></div>
+        <div><input type="submit" value="Find ratings"/></div>
+        <div><h3>{{pred}}</h3></div>
+      </form>
+      
+
 	</div>
 </body>
 </html>

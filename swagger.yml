@@ -1,0 +1,32 @@
+---
+swagger: '2.0'
+basePath: "/"
+paths:
+  "/Saras/{text}":
+    parameters:
+    - name: text
+      in: path
+      required: true
+      type: string
+    post:
+      responses:
+        '200':
+          description: Success
+      operationId: post_assign_api
+      tags:
+      - Saras
+info:
+  title: API
+  version: '1.0'
+produces:
+- application/json
+consumes:
+- application/json
+tags:
+- name: Saras
+  description: Ratnesh Saras APIs
+responses:
+  ParseError:
+    description: When a mask can't be parsed
+  MaskError:
+    description: When any error occurs on mask
